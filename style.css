@@ -9,27 +9,35 @@
 body{
     width: 100%;
     height: 100vh;
-    background: #232526;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #403A3E;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #BE5869, #403A3E);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #BE5869, #403A3E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .container{
-    width: 80%;
-    height: 80%;
+    border-radius: 10px;
+    box-shadow: 0rem 1rem 5rem rgba(0, 0, 0, 0.8);
+    background: #aa4b6b;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    width: 60%;
+    height: 70%;
     display: flex;
     flex-direction: column;
 }
 
+
+
 .inputs{
     display: flex;
-    margin: 2vh;
+    margin: 1vh;
 }
 
 input[type='text']{
+    grid-column: 2;
     font-size: 1.5rem;
     max-width: 90%;
     align-items: center;
@@ -53,7 +61,43 @@ input[type='submit']{
 }
 
 .local, .temperatura, #descricaotempo{
+    text-align: center;
     letter-spacing: 3px;
     font-weight: bold;
     color: #fff;
+}
+
+.local{
+    display: flex;
+    flex-direction: row;
+    font-size: 1.5rem;
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+.info{
+    margin-top: 5vh;
+    grid-row-gap: 2rem;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+img{
+    margin: 0 auto;
+    width: 35vh;
+    height: auto;
+    grid-column: 2;
+}
+.temperatura{
+    align-items: center;
+    justify-content: center;
+    grid-column: 2;
+}
+.local{
+    align-items: center;
+    justify-content: center;
+    grid-row: 1;
+}
+#descricaotempo{
+    grid-column: 2;
 }

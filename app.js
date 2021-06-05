@@ -1,4 +1,4 @@
-let estado = document.querySelector('#estado');
+let pais = document.querySelector('#pais');
 let cidade = document.querySelector('#cidade');
 let consultar = document.querySelector('#btn');
 
@@ -8,13 +8,14 @@ let temperatura = document.querySelector('.temperatura');
 
 consultar.addEventListener('click', () => {
     let key = `bd4ea33ecf905116d12af172e008dbae`;
-    let url = `http://api.openweathermap.org/data/2.5/weather?q=${cidade.value},${estado.value}&lang=en&units=metric&appid=${key}`;
+    let url = `http://api.openweathermap.org/data/2.5/weather?q=${cidade.value},${pais.value}&lang=en&units=metric&appid=${key}&lang={pt_br}`;
 
     fetch(url).then(response => {
         return response.json();
     }).then(data => {
         console.log(data);
-        local.innerText = `${data.name} / ${data.sys.estado}`;
+        local.innerText = `${data.name} / ${data.sys.country}`;
+        console.log(data.sys.country)
         temperatura.innerHTML = `${data.main.temp}°<b>C</b>`;
 
         data.weather.forEach(items => {
@@ -40,6 +41,6 @@ consultar.addEventListener('click', () => {
         temperatura.innerHTML = `${data.main.feels_like}°C`;
         
     })
-    estado.value = "";
+    pais.value = "";
     cidade.value = "";
 });
