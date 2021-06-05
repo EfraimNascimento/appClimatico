@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background: #232526;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.inputs{
+    display: flex;
+    margin: 2vh;
+}
+
+input[type='text']{
+    font-size: 1.5rem;
+    max-width: 90%;
+    align-items: center;
+    margin: 2vh;
+    width: 100%;
+    height: 2rem;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+input[type='submit']{
+    font-size: .9rem;
+    max-width: 40%;
+    align-items: center;
+    margin: 2vh;
+    width: 10rem;
+    height: 2rem;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+.local, .temperatura, #descricaotempo{
+    letter-spacing: 3px;
+    font-weight: bold;
+    color: #fff;
+}
