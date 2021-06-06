@@ -8,7 +8,7 @@ let temperatura = document.querySelector('.temperatura');
 
 consultar.addEventListener('click', () => {
     let key = `bd4ea33ecf905116d12af172e008dbae`;
-    let url = `http://api.openweathermap.org/data/2.5/weather?q=${cidade.value},${pais.value}&lang=en&units=metric&appid=${key}&lang={pt_br}`;
+    let url = `http://api.openweathermap.org/data/2.5/weather?q=${cidade.value},${pais.value}&lang=pt_br&units=metric&appid=${key}`;
 
     fetch(url).then(response => {
         return response.json();
